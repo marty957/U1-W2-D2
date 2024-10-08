@@ -71,19 +71,21 @@ if (e + h === 8 && e - h === 0) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-const totalShoppingCart = 45;
+const totalShoppingCart = 55;
 
 if (totalShoppingCart > 50) {
-  console.log("sconto sul prezzo finale 20%");
-  console.log((totalShoppingCart * 20) / 100 + totalShoppingCart);
-} else console.log("il carello è inferiore a 50 per cui le spese di spedizione ammontano a 10 euro");
-console.log(totalShoppingCart + 10);
+  console.log("spedizione gratuita, totale carello:", totalShoppingCart);
+} else console.log("il carello è inferiore a 50 per cui le spese di spedizione ammontano a 10 euro", totalShoppingCart + 10);
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
-
+if (totalShoppingCart - (totalShoppingCart * 20) / 100 > 50) {
+  console.log("spedizione gratuita, totale carello:", totalShoppingCart);
+} else {
+  console.log("il carello è inferiore a 50 euro per cui le spese di spedizione ammontano a 10 euro. Totale dovuto:", totalShoppingCart + 10);
+}
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
@@ -152,9 +154,10 @@ const me = {
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
+console.log(me);
 
 me.city = "toronto";
-console.log(me);
+console.log(me.city);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -165,9 +168,16 @@ console.log(me);
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-delete me.skills.css;
+/*delete me.skills.css;
 console.log(me);
-console.log(me.skills);
+console.log(me.skills);*/
+
+/*me.skills.pop();
+console.log(me.skills);*/
+
+const meCopia = structuredClone(me);
+meCopia.skills = ["javascript", "html"];
+console.log(meCopia);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
