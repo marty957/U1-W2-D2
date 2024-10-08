@@ -170,10 +170,10 @@ console.log(me);
 
 /*delete me.skills.css;
 console.log(me);
-console.log(me.skills);*/
+console.log(me.skills); non funziona*/
 
 /*me.skills.pop();
-console.log(me.skills);*/
+console.log(me.skills); non funziona*/
 
 const meCopia = structuredClone(me);
 meCopia.skills = ["javascript", "html"];
@@ -183,7 +183,7 @@ console.log(meCopia);
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 const myVar = [];
-console.log("visualizzazione myVar vuoto");
+console.log("visualizzazione myVar vuoto"), myVar;
 
 myVar.unshift(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 /*myVar.push(0); aggiunge all'ultimo elemento*/
@@ -194,4 +194,4 @@ console.log("myVar riempito", myVar);
 */
 
 myVar.splice(9, 1, 100);
-console.log(myVar);
+console.log("sostituzione ultimo valore", myVar);
